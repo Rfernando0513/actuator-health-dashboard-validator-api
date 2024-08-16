@@ -1,0 +1,5 @@
+<div [ngClass]="{'healthy': status === 'UP', 'unhealthy': status !== 'UP'}">
+    <h3>{{ apiUrl }}</h3>
+    <p>Status: {{ status }}</p>
+</div>
+  
