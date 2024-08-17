@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { HealthService } from '../../services/health.service';
+import { Component, Input} from '@angular/core';
+import { HealthStatus } from '../../../Interface/HealthStatus';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -9,28 +9,11 @@ import { CommonModule } from '@angular/common';
   templateUrl: './health-card.component.html',
   styleUrl: './health-card.component.scss'
 })
-export class HealthCardComponent implements OnInit {
+export class HealthCardComponent {
 
-  @Input() apiUrl!: string;
-  status: string = 'unknown'
+  @Input() service!: HealthStatus;
 
-  constructor(private healthService: HealthService) {}
-
-  ngOnInit(): void {
-    this.checkHealt();
-    setInterval(() => this.checkHealt(), 30000)
-  }
-
-  checkHealt(){
-    this.healthService.getActuatorResponseStatus(this.apiUrl).subscribe({
-      next: (data) => {
-        this.status = data.status;
-      },
-      error: (error) => {
-        this.status = 'Down'
-      }
-    })
-  }
+  getStatusClass(): string {
+    return this.service.status === 'UP' ? 'status-up' : 'status-down';
+  };
 }
-
-

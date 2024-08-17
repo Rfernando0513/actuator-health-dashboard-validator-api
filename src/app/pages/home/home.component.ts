@@ -1,6 +1,6 @@
 import { Component} from '@angular/core';
-import { HealthCardComponent } from '../../app/components/health-card/health-card.component';
-import { DashboardComponent } from "../../app/components/dashboard/dashboard.component";
+import { HealthCardComponent } from '../../components/health-card/health-card.component';
+import { DashboardComponent } from "../../components/dashboard/dashboard.component";
 
 @Component({
   selector: 'app-home',

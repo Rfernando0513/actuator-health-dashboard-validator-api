@@ -1,0 +1,15 @@
+{
+    "services": 
+    [
+        { "url": "/services1/health", "status":"UP" },
+        { "url": "/services2/health", "status":"DOWN" },
+        { "url": "/services3/health", "status":"UP" },
+        { "url": "/services4/health", "status":"DOWN" },
+        { "url": "/services5/health", "status":"UP" },
+        { "url": "/services6/health", "status":"UP" },
+        { "url": "/services7/health", "status":"DOWN" },
+        { "url": "/services8/health", "status":"UP" },
+        { "url": "/services9/health", "status":"UP" },
+        { "url": "/services10/health", "status":"DOWN" }
+    ]
+}

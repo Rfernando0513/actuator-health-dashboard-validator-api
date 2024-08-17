@@ -1,4 +1,4 @@
 export const environment = {
     production: false,
-    apiUrl: 'https://localhost:8080/actuator'
+    apiUrl: 'http://localhost:3000'
 };

@@ -1,5 +1,5 @@
 <div class="dashboard">
-    @for (item of [apiUrls]; track apiUrls) {
-        <app-health-card></app-health-card>
-    }  
+    <app-health-card
+    *ngFor="let service of services"
+    [service]="service"></app-health-card>
 </div>
