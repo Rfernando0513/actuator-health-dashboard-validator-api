@@ -9,7 +9,6 @@
         { "url": "/services6/health", "status":"UP" },
         { "url": "/services7/health", "status":"DOWN" },
         { "url": "/services8/health", "status":"UP" },
-        { "url": "/services9/health", "status":"UP" },
-        { "url": "/services10/health", "status":"DOWN" }
+        { "url": "/services9/health", "status":"UP" } 
     ]
 }

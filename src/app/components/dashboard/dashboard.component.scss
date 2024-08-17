@@ -1,5 +1,20 @@
-.dashboard {
+.dashboard-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100rem;
+  height: 100%;
+  padding: 40px 4%;
+
+
+  .dashboard {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
+    padding: 40px;
+    width: 1000px;
+    border: solid 2px #7e686862;
+    border-radius: 3px;
   }
+}

@@ -10,7 +10,6 @@ import { CommonModule } from '@angular/common';
   styleUrl: './health-card.component.scss'
 })
 export class HealthCardComponent {
-
   @Input() service!: HealthStatus;
 
   getStatusClass(): string {

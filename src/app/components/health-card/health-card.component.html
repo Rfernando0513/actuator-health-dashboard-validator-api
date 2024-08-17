@@ -1,4 +1,4 @@
-<div class="card" [ngClass]="getStatusClass()">
-    <h3>{{ service.url }}</h3>
-    <p>Status: {{ service.status }} </p>
+<div class="card" [class]='getStatusClass()'>
+    <h3>Status: {{ service.status }} </h3>
+    <p>{{ service.url }}</p>
 </div>

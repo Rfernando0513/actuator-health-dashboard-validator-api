@@ -1,5 +1,7 @@
-<div class="dashboard">
-    <app-health-card
-    *ngFor="let service of services"
-    [service]="service"></app-health-card>
+<div class="dashboard-container">
+    <div class="dashboard">
+        @for (service of services; track services) {
+            <app-health-card [service]="service"></app-health-card>
+        }
+    </div>
 </div>
