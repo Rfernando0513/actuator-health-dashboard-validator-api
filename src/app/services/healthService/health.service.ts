@@ -3,16 +3,27 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from '../../../environments/environment.development'
 import { HealthStatus } from '../../../Interface/IHealthStatus';
+import { MicroService } from '../microService/micro-service.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HealthService {
-  private apiUrl = `${environment.apiUrl}/healthStatus`;
+  private newMicroservice!: MicroService;
 
-  constructor(private client: HttpClient){  }
+  constructor(private client: HttpClient, microService: MicroService){  }
 
-  getServiceHealth(): Observable<HealthStatus[]>{
-    return this.client.get<HealthStatus[]>(this.apiUrl);
+  checkHealthStatus(url: string): HealthStatus {
+    return {
+      url,
+      status: url.includes('UP') ? 'UP' : 'DOWN'
+    }
   }
+
+  getHealthStatus(): Observable<HealthStatus[]> {
+    return this.getHealthStatus().pipe(
+      map(microservices => microservices.map(service => this.checkHealthStatus(service.url)))
+    );
+  }
+
 }

@@ -31,7 +31,7 @@ export class DashboardComponent {
 
   //Declarations Paginator
   length = 0;
-  pageSize = 10;
+  pageSize = 9;
   pageIndex = 0;
   pageSizeOptions = [12, 24, 50, 100];
 
@@ -90,7 +90,7 @@ export class DashboardComponent {
   onSubmit(): void {
     this.microService.addMicroService(this.newMicroService).subscribe({
       next: (microservice) => {
-        this.microService.push(microservice);
+        this.microService.addMicroService(microservice);
         this.checkHealthStatus();
       },
       error: (error) => {

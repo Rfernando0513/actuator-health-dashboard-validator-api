@@ -20,6 +20,8 @@ import {MatChipsModule} from '@angular/material/chips';
 })
 export class HealthCardComponent {
   @Input() service!: HealthStatus;
+  
+
 
   getStatusClass(): string {
     return this.service.status === 'UP' ? 'status-up' : 'status-down';

@@ -1,26 +1,31 @@
 {
     "microservices": [
       {
-        "name": "Service 1",
-        "origem": "Origin 1",
+        "id": "1",
+        "name": "Pagamentos",
+        "origem": "Financeiro",
         "url": "http://localhost:3000/service1",
-        "time": "60"
+        "time": "TI"
       },
       {
-        "name": "Service 2",
-        "origem": "Origin 2",
+        "id": "2",
+        "name": "Vendas",
+        "origem": "Comercial",
         "url": "http://localhost:3000/service2",
-        "time": "120"
+        "time": "TI"
       }
     ],
     "healthStatus": [
-      {
-        "url": "http://localhost:3000/service1",
-        "status": "UP"
-      },
-      {
-        "url": "http://localhost:3000/service2",
-        "status": "DOWN"
-      }
+      {"url": "http://localhost:3000/service1","status": "DOWN"},
+      {"url": "http://localhost:3000/service2","status": "DOWN"},
+      {"url": "http://localhost:3000/service3","status": "UP"},
+      {"url": "http://localhost:3000/service4","status": "UP"},
+      {"url": "http://localhost:3000/service5","status": "DOWN"},
+      {"url": "http://localhost:3000/service6", "status": "UP"},
+      {"url": "http://localhost:3000/service7","status": "UP"},
+      {"url": "http://localhost:3000/service8","status": "DOWN"},
+      {"url": "http://localhost:3000/service9","status": "UP"},
+      {"url": "http://localhost:3000/service10","status": "UP"},
+      {"url": "http://localhost:3000/service11","status": "DOWN"}
     ]
   }
