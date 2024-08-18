@@ -1,7 +1,17 @@
 <div class="dashboard-container">
     <div class="dashboard">
-        @for (service of services; track services) {
+
+        @for (service of services; track services){
             <app-health-card [service]="service"></app-health-card>
         }
+        <div>
+            <mat-paginator
+                [length]="length"
+                [pageSize]="pageSize"
+                [pageSizeOptions]="pageSizeOptions"
+                (page)="handlePageEvent($event)"
+                aria-label="Select page">
+          </mat-paginator>
+        </div>
     </div>
 </div>

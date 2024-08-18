@@ -1,14 +1,26 @@
 {
-    "services": 
-    [
-        { "url": "/services1/health", "status":"UP" },
-        { "url": "/services2/health", "status":"DOWN" },
-        { "url": "/services3/health", "status":"UP" },
-        { "url": "/services4/health", "status":"DOWN" },
-        { "url": "/services5/health", "status":"UP" },
-        { "url": "/services6/health", "status":"UP" },
-        { "url": "/services7/health", "status":"DOWN" },
-        { "url": "/services8/health", "status":"UP" },
-        { "url": "/services9/health", "status":"UP" } 
+    "microservices": [
+      {
+        "name": "Service 1",
+        "origem": "Origin 1",
+        "url": "http://localhost:3000/service1",
+        "time": "60"
+      },
+      {
+        "name": "Service 2",
+        "origem": "Origin 2",
+        "url": "http://localhost:3000/service2",
+        "time": "120"
+      }
+    ],
+    "healthStatus": [
+      {
+        "url": "http://localhost:3000/service1",
+        "status": "UP"
+      },
+      {
+        "url": "http://localhost:3000/service2",
+        "status": "DOWN"
+      }
     ]
-}
+  }

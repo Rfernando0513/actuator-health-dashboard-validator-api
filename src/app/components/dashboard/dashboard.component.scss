@@ -1,4 +1,5 @@
-.dashboard-container{
+.dashboard-container {
+  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,14 +8,20 @@
   padding: 40px 4%;
 
 
-  .dashboard {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    padding: 40px;
-    width: 1000px;
-    border: solid 2px #7e686862;
-    border-radius: 3px;
-  }
+    .dashboard {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 90rem;
+      height: 35rem;
+
+      gap: 10px;
+      padding: 40px;
+      border: solid 2px #7e686862;
+      border-radius: 3px;
+    }
+
+    .demo-paginator {
+      width: 600px;
+    }
 }

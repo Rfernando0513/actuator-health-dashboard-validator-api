@@ -1,4 +1,17 @@
-<div class="card" [class]='getStatusClass()'>
-    <h3>Status: {{ service.status }} </h3>
-    <p>{{ service.url }}</p>
-</div>
+<mat-card class="cardStatus" appearance="outlined" [class]="getStatusClass()">
+    <mat-card-header>
+      <mat-card-title>
+        <h3>{{service.status}}</h3>
+    </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <h6>{{service.url}}</h6>
+    </mat-card-content>
+    <mat-card-footer class="cardStatus-footer">
+      <mat-chip-set>
+        <mat-chip>charming</mat-chip>
+        <mat-chip>graceful</mat-chip>
+        <mat-chip>sassy</mat-chip>
+      </mat-chip-set>
+    </mat-card-footer>
+  </mat-card>

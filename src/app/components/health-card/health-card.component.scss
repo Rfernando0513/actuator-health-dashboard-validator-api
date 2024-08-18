@@ -1,17 +1,17 @@
 .status-up {
   background-color: #25D366;
-  color: white;
+  color: #ffff;
 }
 
 .status-down {
   background-color: red;
-  color: white;
+  color: #ffff;
 }
 
-.card {
-  width: 250px;
-  height: 80px;
-  padding: 20px;
-  margin: 10px;
-  border-radius: 3px;
+.cardStatus {
+  max-width: 400px;
+}
+
+.cardStatus-footer {
+  padding: 16px;
 }
