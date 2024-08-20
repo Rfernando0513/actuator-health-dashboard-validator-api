@@ -1,17 +1,41 @@
 .status-up {
   background-color: #25D366;
-  color: #ffff;
+  color: #fff;
 }
 
 .status-down {
   background-color: red;
-  color: #ffff;
+  color: #fff;
 }
 
 .cardStatus {
-  width: 400px;
+  width: 430px;
+  height: 200px;
 }
 
 .cardStatus-footer {
-  padding: 16px;
+  padding-top: 10px;
+  margin-left: 13px;
+}
+
+mat-chip {
+  text-decoration: none;
+  color: #ffffff !important;
+  background-color: white;
+  border: 2px solid #ffffff;
+}
+
+.mat-mdc-standard-chip {
+  --mdc-chip-label-text-color: #fff;
+}
+
+.faIcon{
+  position: absolute;
+  margin-left: 375px;
+  cursor: pointer;
+  transition: 1.2;
+}
+
+.faIcon:hover{
+  transform: scale(1.2);
 }

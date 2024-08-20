@@ -1,17 +1,18 @@
 <mat-card class="cardStatus" appearance="outlined" [class]="getStatusClass()">
-    <mat-card-header>
-      <mat-card-title>
-        <h3>{{service.name}}</h3>
+  <mat-card-header>
+    <h3 class="faIcon"><fa-icon [icon]="faTimes" (click)="onDelete(service)"></fa-icon></h3>
+    <mat-card-title>
+      <h3>{{service.name}}</h3>
     </mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <h6>{{service.status}}</h6>
-    </mat-card-content>
-    <mat-card-footer class="cardStatus-footer">
-      <mat-chip-set>
-        <mat-chip>{{service.origem}}</mat-chip>
-        <mat-chip>{{service.status}}</mat-chip>
-        <mat-chip>{{service.time}}</mat-chip>
-      </mat-chip-set>
-    </mat-card-footer>
-  </mat-card>
+  </mat-card-header>
+  <mat-card-content>
+    <h6>{{service.status}}</h6>
+  </mat-card-content>
+  <mat-card-footer class="cardStatus-footer">
+    <mat-chip-set>
+      <mat-chip>{{service.origem}}</mat-chip>
+      <mat-chip>{{service.status}}</mat-chip>
+      <mat-chip>{{service.time}}</mat-chip>
+    </mat-chip-set>
+  </mat-card-footer>
+</mat-card>

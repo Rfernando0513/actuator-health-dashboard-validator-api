@@ -70,4 +70,16 @@ export class DashboardComponent implements OnInit {
     this.pageSize = event.pageSize;
     this.updatePagedServices();
   }
+
+  deleteMicroService(microservice: IMicroService): void {
+    this.microService.deleteMicroservice(microservice).subscribe({
+      next: () => {
+        this.microservices = this.microservices.filter((t) => t.id == microservice.id)
+        console.log('deletado com sucesso')
+      },
+      error: (error) => {
+        console.error('Erro ao deletar MicroServiço: ', error)
+      }
+    });
+  }
 }

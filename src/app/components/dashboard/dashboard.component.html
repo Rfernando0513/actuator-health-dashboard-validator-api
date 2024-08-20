@@ -1,7 +1,8 @@
 <div class="dashboard-container">
     <div class="dashboard">
-        @for (service of microservices | slice:(pageIndex * pageSize):(pageIndex * pageSize + pageSize); track microservices){
-            <app-health-card [service]="service"></app-health-card>
+        
+        @for (service of microservices | slice:(pageIndex * pageSize):(pageIndex * pageSize + pageSize); track microservices;){
+            <app-health-card [service]="service" (onDeleteMicroService)="deleteMicroService($event)"></app-health-card>
         }
 
         <div>

@@ -17,14 +17,18 @@ export class MicroService {
     return this.http.get<IMicroService[]>(this.apiUrl).pipe(
       map(services => services.map(service => this.checkHealthStatus(service)))
     );
-  }
+  } 
 
   addMicroService(microService: IMicroService): Observable<IMicroService>{
     return this.http.post<IMicroService>(this.apiUrl, microService)
   }
 
   private checkHealthStatus(microService: IMicroService): IMicroService {
-    microService.status = microService.url.includes('UP') ? 'UP' : 'DOWN';
+    microService.status = microService.status.includes('UP') ? 'UP' : 'DOWN';
     return microService;
   }
+
+  deleteMicroservice(microservice: IMicroService): Observable<IMicroService> {
+    return this.http.delete<IMicroService>(`${this.apiUrl}/${microservice.id}`);
+  } 
 }
